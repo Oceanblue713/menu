@@ -1,14 +1,25 @@
 import React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Typography  from '@mui/material/Typography';
+import Toolbar from '@material-ui/core/Toolbar';
+import IconButton from '@material-ui/core/IconButton';
+import MenuIcon from '@material-ui/icons/Menu';
 
 const Nav = () => {
   return (
-    <AppBar position="static">
-      <Typography variant="h6" component="div" sx={{flexGrow: 1}}>
-              Cruise
-      </Typography>
-    </AppBar>
+    <div>
+      <AppBar position="static" color="primary">
+        <Toolbar variant="dense">
+          <IconButton edge="start" 
+            color="inherit" aria-label="menu">
+              <MenuIcon />
+          </IconButton>
+          <Typography variant="h6" color="inherit">
+            Cruise
+          </Typography>
+        </Toolbar>
+      </AppBar>
+    </div>
   )
 }
 
