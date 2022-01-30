@@ -9,7 +9,7 @@ const Nav = () => {
   return (
     <div>
       <AppBar position="static" color="primary">
-        <Toolbar variant="dense">
+        <Toolbar>
           <IconButton edge="start" color="inherit" aria-label="menu">
             <MenuIcon />
           </IconButton>
