@@ -1,11 +1,11 @@
 import React from "react";
-import CardContainer from "./Cards/Container";
-import LargeCard from "./Cards/LargeCard";
+import CardContainer from "./Cards/CardContainer";
+import logo from "./Images/Cruisenewbie.png";
 
 const Main = (props) => {
   return (
-    <div>
-      <h1>Main</h1>
+    <div id="main">
+      <img src={logo} id="logo" />
       <CardContainer />
     </div>
   );

@@ -1,7 +1,11 @@
-import React from "react";
+import React from 'react';
+import ArticleContainer from './ArticleContainer';
+import { articles } from '../../articles/article1';
 
 const Article = () => {
-  return <div>Article</div>;
-};
 
-export default Article;
+  const [articles, setArticles] = useState();
+  return (
+    <ArticleContainer title={} />
+  )
+}
