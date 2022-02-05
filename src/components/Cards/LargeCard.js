@@ -6,19 +6,17 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import { DeleteOutline } from "@material-ui/icons";
-import Grid from "@mui/material/Grid";
 
-export default function LargeCard() {
+export default function LargeCard(props) {
   return (
     <Card md={{ height: 300, width: 300 }}>
-      <CardMedia component="img" height="200" image="" alt="" />
+      <CardMedia component="img" height="200" image={props.image} alt="" />
       <CardContent>
         <Typography gutterBottom variant="h6">
-          Cruise
+          {props.title}
         </Typography>
         <Typography variant="body1" color="text.secondary">
-          Welcome to the cruise world. Are you a new?
+          {props.article}
         </Typography>
       </CardContent>
       <CardActions>

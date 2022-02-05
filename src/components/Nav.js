@@ -17,9 +17,11 @@ const Nav = () => {
               <MenuIcon />
             </IconButton>
             <Typography variant="h5" color="inherit">
-              Cruise
+              <Link to="/">Cruise</Link>
             </Typography>
-            <Button>Article</Button>
+            <Button>
+              <Link to="article">Article</Link>
+            </Button>
           </Toolbar>
         </AppBar>
       </Box>
