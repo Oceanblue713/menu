@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Grid from "@mui/material/Grid";
 import LargeCard from "./LargeCard";
 import { articles } from "../../articles/article1";
+import Box from "@mui/material/Box";
 
 export default function CardContainer() {
   const [contents, setContents] = useState([]);
@@ -24,7 +25,11 @@ export default function CardContainer() {
   };
 
   return (
-    <div>
+    <Box
+      component="article"
+      sx={{ display: "block" }}
+      md={{ display: "block" }}
+    >
       <Grid container>
         {articles.map((item) => {
           return (
@@ -42,6 +47,6 @@ export default function CardContainer() {
           <LargeCard />
         </Grid>
       </Grid>
-    </div>
+    </Box>
   );
 }
