@@ -10,18 +10,20 @@ import { Link } from "react-router-dom";
 export default function LargeCard(props) {
   return (
     <Card md={{ height: 300, width: 300 }}>
-      <CardMedia component="img" height="200" image={props.image} alt="" />
-      <CardContent>
-        <Typography gutterBottom variant="h6">
-          {props.title}
-        </Typography>
-        <Typography variant="body1" color="text.secondary">
-          {props.article}
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <Button size="small">Read More</Button>
-      </CardActions>
+      <Link to={`/article/${props.link}`}>
+        <CardMedia component="img" height="200" image={props.image} alt="" />
+        <CardContent>
+          <Typography gutterBottom variant="h6">
+            {props.title}
+          </Typography>
+          <Typography variant="body1" color="text.secondary">
+            {props.article}
+          </Typography>
+        </CardContent>
+        <CardActions>
+          <Button size="small">Read More</Button>
+        </CardActions>
+      </Link>
     </Card>
   );
 }

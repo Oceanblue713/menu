@@ -7,12 +7,6 @@ import Box from "@mui/material/Box";
 export default function CardContainer() {
   const [contents, setContents] = useState([]);
 
-  const getContents = () => {};
-
-  useEffect(() => {
-    getContents();
-  }, []);
-
   const replaceDot = (article) => {
     const _article = article.split(" ");
     let panelWord = [];
@@ -38,14 +32,11 @@ export default function CardContainer() {
                 title={item.title_en}
                 article={replaceDot(item.article_en)}
                 image={item.image}
+                link={item.link}
               />
             </Grid>
           );
         })}
-
-        <Grid item xs={12} sm={6} md={4}>
-          <LargeCard />
-        </Grid>
       </Grid>
     </Box>
   );

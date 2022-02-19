@@ -4,6 +4,10 @@
   margin-right: auto;
 }
 
+a{
+  text-decoration: none;
+}
+
 #footer{
   color: whitesmoke;
   background-color: #203559;

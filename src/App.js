@@ -12,12 +12,10 @@ function App() {
       <div className="app">
         <Grid>
           <Nav />
-
           <Routes>
-            <Route path="/" element={<Main />} />
-            <Route path="article" element={<ArticleContainer />} />
+            <Route path="/" exact element={<Main />} />
+            <Route path="/article/:id" element={<ArticleContainer />} />
           </Routes>
-
           <Footer />
         </Grid>
       </div>
