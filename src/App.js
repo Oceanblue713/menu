@@ -14,7 +14,7 @@ function App() {
           <Nav />
           <Routes>
             <Route path="/" exact element={<Main />} />
-            <Route path="/article/:id" element={<ArticleContainer />} />
+            <Route path="/article/:link" element={<ArticleContainer />} />
           </Routes>
           <Footer />
         </Grid>
