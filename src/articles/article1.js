@@ -5,8 +5,8 @@ export const articles = [
       "Is this your first Cruise? Is this your first Cruise? Is this your first Cruise?Is this your first Cruise?Is this your first Cruise?",
     title_ja: "First Cruise",
     article_ja: "ようこそ",
-    image: "images/image1_small.jpg",
-    link: "",
+    image: "/images/image1_small.jpg",
+    link: "welcome",
   },
 
   {
@@ -14,7 +14,16 @@ export const articles = [
     article_en: "Is this your first Cruise?",
     title_ja: "First Cruise",
     article_ja: "ようこそ",
-    image: "images/image2_small.jpg",
-    link: "",
+    image: "/images/image2_small.jpg",
+    link: "second",
+  },
+
+  {
+    title_en: "Third Cruise",
+    article_en: "Is this your first Cruise?",
+    title_ja: "First Cruise",
+    article_ja: "ようこそ",
+    image: "/images/image2_small.jpg",
+    link: "third",
   },
 ];

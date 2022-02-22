@@ -8,6 +8,7 @@ const ArticleContainer = () => {
       title={articles[0].title_en}
       article={articles[0].article_en}
       image={articles[0].image}
+      link={articles[0].link}
     />
   );
 };
