@@ -19,25 +19,20 @@ export default function CardContainer() {
   };
 
   return (
-    <Box
-      component="article"
-      sx={{ display: "block" }}
-      md={{ display: "block" }}
-    >
-      <Grid container>
-        {articles.map((item) => {
-          return (
-            <Grid item xs={12} sm={6} md={4}>
-              <LargeCard
-                title={item.title_en}
-                article={replaceDot(item.article_en)}
-                image={item.image}
-                link={item.link}
-              />
-            </Grid>
-          );
-        })}
-      </Grid>
-    </Box>
+    <Grid container spacing={2}>
+      {articles.map((item) => {
+        return (
+          <Grid item xs={12} sm={6} md={4}>
+            <LargeCard
+              key={item.title_en}
+              title={item.title_en}
+              article={replaceDot(item.article_en)}
+              image={item.image}
+              link={item.link}
+            />
+          </Grid>
+        );
+      })}
+    </Grid>
   );
 }
