@@ -5,14 +5,9 @@ import Article from "./components/Articles/Article";
 import ArticleContainer from "./components/Articles/ArticleContainer";
 import Footer from "./components/Footer";
 import Grid from "@mui/material/Grid";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Switch,
-} from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-function App(item) {
+function App() {
   return (
     <Router>
       <div className="app">
@@ -20,7 +15,7 @@ function App(item) {
           <Nav />
           <Routes>
             <Route path="/" exact element={<Main />} />
-            <Route path="/article" component={<ArticleContainer />} />
+            <Route path="/article/:link" element={<Article />} />
           </Routes>
           <Footer />
         </Grid>
