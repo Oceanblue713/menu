@@ -1,20 +1,26 @@
-import { useEffect, useState } from "react";
 import { Container, CardMedia, Typography, Box } from "@mui/material";
-import classes from "./Article.module.css";
 import { articles } from "../../articles/article1";
 import { useParams } from "react-router-dom";
+import "./Article.css";
 
 const Article = () => {
   let { link } = useParams();
 
-  console.log(link);
+  const article = articles.find((item) => item.link === link);
+
   return (
-    <Container fixed disableGutters maxWidth="md">
+    <Container fixed disableGutters maxWidth="md" className="article-top">
       <Box className="article-image">
-        <CardMedia component="img" height="400" width="100vw" image="" alt="" />
-        <Typography variant="h3">{articles[0].title_en}</Typography>
+        <CardMedia
+          component="img"
+          height="400"
+          width="100vw"
+          image={article.image}
+          alt={article.article_en}
+        />
+        <Typography variant="h3">{article.title}</Typography>
         <Typography variant="body1" gutterBottom>
-          {link}
+          {article.article}
         </Typography>
       </Box>
     </Container>
