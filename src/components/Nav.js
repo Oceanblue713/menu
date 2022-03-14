@@ -11,7 +11,7 @@ const Nav = () => {
   return (
     <div>
       <Box>
-        <AppBar position="static" color="primary">
+        <AppBar position="fixed" color="primary">
           <Toolbar>
             <IconButton edge="start" color="inherit" aria-label="menu">
               <MenuIcon />

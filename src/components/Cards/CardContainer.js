@@ -24,9 +24,9 @@ export default function CardContainer() {
         return (
           <Grid item xs={12} sm={6} md={4}>
             <LargeCard
-              key={item.title_en}
-              title={item.title_en}
-              article={replaceDot(item.article_en)}
+              key={item.title}
+              title={item.title}
+              article={replaceDot(item.article)}
               image={item.image}
               link={item.link}
             />
