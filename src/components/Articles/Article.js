@@ -8,6 +8,17 @@ const Article = () => {
 
   const article = articles.find((item) => item.link === link);
 
+  const subTitles = [];
+  const subArticles = [];
+  for (let key in article) {
+    if (key.includes("sub_title_")) {
+      subTitles.push(article[key]);
+    }
+    if (key.includes("sub_article_")) {
+      subArticles.push(article[key]);
+    }
+  }
+
   return (
     <Container fixed disableGutters maxWidth="md" className="article-top">
       <Box className="article-image">
