@@ -3,7 +3,7 @@ import { articles } from "../../articles/article1";
 import { useParams } from "react-router-dom";
 import "./Article.css";
 
-const Article = () => {
+export default function Article() {
   let { link } = useParams();
 
   const article = articles.find((item) => item.link === link);
@@ -17,6 +17,13 @@ const Article = () => {
     if (key.includes("sub_article_")) {
       subArticles.push(article[key]);
     }
+  }
+
+  let loopIndex = 0;
+  if (subTitles.length > subArticles.length) {
+    loopIndex = subTitles.length;
+  } else {
+    loopIndex = subArticles.length;
   }
 
   return (
@@ -34,8 +41,23 @@ const Article = () => {
           {article.article}
         </Typography>
       </Box>
+      {article.map((item, index) => {
+        console.log(article);
+      })}
+      <SubSentence
+        subTitle={article.sub_title_1}
+        subArticle={article.sub_article_1}
+      />
     </Container>
   );
-};
+}
 
-export default Article;
+const SubSentence = (props) => {
+  const { subTitle, subArticle } = props;
+  return (
+    <>
+      <h6>{subTitle}</h6>
+      <p>{subArticle}</p>
+    </>
+  );
+};
