@@ -1,6 +1,7 @@
 import { Container, CardMedia, Typography, Box } from "@mui/material";
 import { articles } from "../../articles/article1";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
+
 import "./Article.css";
 
 export default function Article() {
@@ -26,6 +27,13 @@ export default function Article() {
     loopIndex = subArticles.length;
   }
 
+  let tempArticle = Object.assign({}, article);
+  delete tempArticle.id;
+  delete tempArticle.title;
+  delete tempArticle.image;
+  delete tempArticle.link;
+  delete tempArticle.article;
+
   return (
     <Container fixed disableGutters maxWidth="md" className="article-top">
       <Box className="article-image">
@@ -41,13 +49,19 @@ export default function Article() {
           {article.article}
         </Typography>
       </Box>
-      {article.map((item, index) => {
-        console.log(article);
+      {Object.keys(tempArticle).map((key, index) => {
+        index += 1;
+        return (
+          <SubSentence
+            key={index}
+            subTitle={tempArticle[`sub_title_${index}`]}
+            subArticle={tempArticle[`sub_article_${index}`]}
+          />
+        );
       })}
-      <SubSentence
-        subTitle={article.sub_title_1}
-        subArticle={article.sub_article_1}
-      />
+      <Link to="/">
+        <button>Back to Main</button>
+      </Link>
     </Container>
   );
 }
