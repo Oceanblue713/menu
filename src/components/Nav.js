@@ -18,6 +18,7 @@ const Nav = () => {
             </IconButton>
             <Typography variant="h5" color="inherit">
               <Link to="/">Cruise</Link>
+              <Link to="/newarticle">New Article</Link>
             </Typography>
           </Toolbar>
         </AppBar>

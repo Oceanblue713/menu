@@ -6,6 +6,7 @@ import ArticleContainer from "./components/Articles/ArticleContainer";
 import Footer from "./components/Footer";
 import Grid from "@mui/material/Grid";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import ArticleInput from "./components/NewArticle/ArticleInput";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Routes>
             <Route path="/" exact element={<Main />} />
             <Route path="/article/:link" element={<Article />} />
+            <Route path="/newarticle" element={<ArticleInput />} />
           </Routes>
           <Footer />
         </Grid>
