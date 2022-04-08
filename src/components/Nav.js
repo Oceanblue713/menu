@@ -19,6 +19,7 @@ const Nav = () => {
             <Typography variant="h5" color="inherit">
               <Link to="/">Cruise</Link>
               <Link to="/newarticle">New Article</Link>
+              <Link to="/articles">Articles</Link>
             </Typography>
           </Toolbar>
         </AppBar>
