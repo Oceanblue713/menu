@@ -1,7 +1,6 @@
 import { Container, CardMedia, Typography, Box } from "@mui/material";
 import { articles } from "../../articles/article1";
 import { useParams, Link } from "react-router-dom";
-
 import "./Article.css";
 
 export default function Article() {
