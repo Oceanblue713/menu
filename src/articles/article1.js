@@ -19,6 +19,7 @@ export const articles = [
     sub_article_6:
       "Click here for advice on how to make the best of your honeymoon!",
     link: "three-reasons-why-cruises-are-perfect-for-honeymoons",
+    next_link: 2,
   },
 
   {

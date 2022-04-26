@@ -1,4 +1,4 @@
-import { Container, CardMedia, Typography, Box } from "@mui/material";
+import { Container, CardMedia, Typography, Box, Button } from "@mui/material";
 import { articles } from "../../articles/article1";
 import { useParams, Link } from "react-router-dom";
 import "./Article.css";
@@ -59,7 +59,7 @@ export default function Article() {
         );
       })}
       <Link to="/">
-        <button>Back to Main</button>
+        <Button>Back to Main</Button>
       </Link>
     </Container>
   );
