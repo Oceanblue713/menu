@@ -16,10 +16,10 @@ const Main = () => {
       </div>
 
       <div className="main-intro">
+        <h2>Articles</h2>
         We are cruisenewbie, introduce you to Royal Caribbean cruise for Newbies
       </div>
       <div className="main-cards">
-        <h2>Articles</h2>
         <CardContainer />
       </div>
       <div className="main-garary">

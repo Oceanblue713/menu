@@ -8,24 +8,29 @@ import Grid from "@mui/material/Grid";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import ArticleInput from "./components/NewArticle/ArticleInput";
 import ArticleMain from "./components/Articles/ArticleMain";
+import theme from "./theme";
+import { ThemeProvider } from "@material-ui/core/styles";
+import React from "react";
 
 function App() {
   return (
-    <Router>
-      <div className="app">
-        <Grid>
-          <Nav />
-          <Routes>
-            <Route path="/" exact element={<Main />} />
-            <Route path="/article/:link" element={<Article />} />
-            <Route path="/newarticle" element={<ArticleInput />} />
-            <Route path="/gallery" element={<GalleryMain />} />
-            <Route path="/articles" element={<ArticleMain />} />
-          </Routes>
-          <Footer />
-        </Grid>
-      </div>
-    </Router>
+    <React.Fragment>
+      <Router>
+        <div className="app">
+          <Grid>
+            <Nav />
+            <Routes>
+              <Route path="/" exact element={<Main />} />
+              <Route path="/article/:link" element={<Article />} />
+              <Route path="/newarticle" element={<ArticleInput />} />
+              <Route path="/gallery" element={<GalleryMain />} />
+              <Route path="/articles" element={<ArticleMain />} />
+            </Routes>
+            <Footer />
+          </Grid>
+        </div>
+      </Router>
+    </React.Fragment>
   );
 }
 
