@@ -1,6 +1,8 @@
 import React from "react";
 import logo from "../Images/Cruisenewbie.png";
 import "./ArticleMain.css";
+import Article from "./Article";
+import { Search } from "@material-ui/icons";
 
 const ArticleMain = () => {
   return (
@@ -9,6 +11,7 @@ const ArticleMain = () => {
         <img src={logo} id="logo" />
       </div>
       <h2 id="articlemain-title">All Articles</h2>
+      <Search />
     </div>
   );
 };
