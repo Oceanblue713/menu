@@ -13,7 +13,7 @@ const Nav = () => {
   return (
     <div>
       <Box>
-        <AppBar position="sticky" color="primary">
+        <AppBar position="sticky" sx={{ bgcolor: "primary" }}>
           <Toolbar>
             <IconButton edge="start" color="inherit" aria-label="menu">
               <MenuIcon />

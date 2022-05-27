@@ -16,16 +16,16 @@ const Main = () => {
       </div>
 
       <div className="main-intro">
-        <h2>Articles</h2>
+        <h2 className="main-intro-head">Articles</h2>
         We are cruisenewbie, introduce you to Royal Caribbean cruise for Newbies
       </div>
       <div className="main-cards">
         <CardContainer />
       </div>
-      <div className="main-garary">
-        <h2>Gallery</h2>
-        <GalleryIntro />
+      <div className="main-intro">
+        <h2 className="main-intro-head">Gallery</h2>
       </div>
+      <GalleryIntro />
     </div>
   );
 };
