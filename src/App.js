@@ -15,21 +15,23 @@ import React from "react";
 function App() {
   return (
     <React.Fragment>
-      <Router>
-        <div className="app">
-          <Grid>
-            <Nav />
-            <Routes>
-              <Route path="/" exact element={<Main />} />
-              <Route path="/article/:link" element={<Article />} />
-              <Route path="/newarticle" element={<ArticleInput />} />
-              <Route path="/gallery" element={<GalleryMain />} />
-              <Route path="/articles" element={<ArticleMain />} />
-            </Routes>
-            <Footer />
-          </Grid>
-        </div>
-      </Router>
+      <ThemeProvider theme={theme}>
+        <Router>
+          <div className="app">
+            <Grid>
+              <Nav />
+              <Routes>
+                <Route path="/" exact element={<Main />} />
+                <Route path="/article/:link" element={<Article />} />
+                <Route path="/newarticle" element={<ArticleInput />} />
+                <Route path="/gallery" element={<GalleryMain />} />
+                <Route path="/articles" element={<ArticleMain />} />
+              </Routes>
+              <Footer />
+            </Grid>
+          </div>
+        </Router>
+      </ThemeProvider>
     </React.Fragment>
   );
 }
