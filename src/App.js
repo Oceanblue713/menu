@@ -19,7 +19,7 @@ function App() {
         <Router>
           <div className="app">
             <Grid>
-              <Nav />
+              <Nav sx={theme} />
               <Routes>
                 <Route path="/" exact element={<Main />} />
                 <Route path="/article/:link" element={<Article />} />
