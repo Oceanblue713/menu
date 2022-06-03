@@ -22,9 +22,9 @@ export default function CardContainer() {
     <Grid container spacing={2}>
       {articles.map((item) => {
         return (
-          <Grid item xs={12} sm={6} md={4}>
+          <Grid item xs={12} sm={6} md={4} key={item.id}>
             <LargeCard
-              key={item.title}
+              key={item.id}
               title={item.title}
               article={replaceDot(item.article)}
               image={item.image}

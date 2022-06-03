@@ -6,23 +6,23 @@ import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 import { Link } from "react-router-dom";
 import { Box } from "@mui/material";
-import { ThemeProvider } from "@material-ui/core/styles";
 import theme from "../theme";
 
 const Nav = () => {
   return (
     <div>
       <Box>
-        <AppBar position="sticky" sx={{ bgcolor: "primary" }}>
+        <AppBar
+          position="sticky"
+          style={{ background: theme.palette.primary.main }}
+        >
           <Toolbar>
             <IconButton edge="start" color="inherit" aria-label="menu">
               <MenuIcon />
             </IconButton>
-            <Typography variant="h5" color="inherit">
-              <Link to="/">Cruise</Link>
-              <Link to="/newarticle">New Article</Link>
-              <Link to="/articles">Articles</Link>
-            </Typography>
+            <Link to="/">Cruise</Link>
+            <Link to="/newarticle">New Article</Link>
+            <Link to="/articles">Articles</Link>
           </Toolbar>
         </AppBar>
       </Box>
