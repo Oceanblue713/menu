@@ -14,13 +14,15 @@ const Nav = () => {
       <Box>
         <AppBar
           position="sticky"
-          style={{ background: theme.palette.primary.main }}
+          style={{ background: theme.palette.secondary.main, color: "inherit" }}
         >
           <Toolbar>
-            <IconButton edge="start" color="inherit" aria-label="menu">
+            <IconButton edge="start" aria-label="menu">
               <MenuIcon />
             </IconButton>
-            <Link to="/">Cruise</Link>
+            <Link to="/" color="white">
+              Cruise
+            </Link>
             <Link to="/newarticle">New Article</Link>
             <Link to="/articles">Articles</Link>
           </Toolbar>

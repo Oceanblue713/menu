@@ -5,7 +5,7 @@ import { CardMedia } from "@material-ui/core";
 const SmallCard = (props) => {
   return (
     <div className="smallcard">
-      <Card>
+      <Card sx={{ display: "flex" }}>
         <h5>{props.title}</h5>
         <CardMedia
           component="img"

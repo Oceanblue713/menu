@@ -8,6 +8,7 @@ import InputAdornment from "@mui/material/InputAdornment";
 import SmallCard from "../Cards/SmallCard";
 import Box from "@material-ui/core/Box";
 import { articles } from "../../articles/article1";
+import { OutlinedInput } from "@material-ui/core";
 
 const ArticleMain = () => {
   return (
@@ -16,7 +17,13 @@ const ArticleMain = () => {
         <img src={logo} id="logo" />
       </div>
       <h2 id="articlemain-title">All Articles</h2>
-      <Search />
+      <Box>
+        <TextField>
+          <OutlinedInput>
+            <Search />
+          </OutlinedInput>
+        </TextField>
+      </Box>
       <Box>
         <SmallCard image={articles[0].image} title={articles[0].title} />
       </Box>
