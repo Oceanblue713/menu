@@ -3,7 +3,8 @@ import logo from "../Images/Cruisenewbie.png";
 import "./ArticleMain.css";
 import Input from "@mui/material/Input";
 import TextField from "@mui/material/TextField";
-import { Search } from "@material-ui/icons";
+import Search from "@mui/icons-material/Search";
+import SearchIcon from "@mui/icons-material/Search";
 import InputAdornment from "@mui/material/InputAdornment";
 import SmallCard from "../Cards/SmallCard";
 import Box from "@material-ui/core/Box";
@@ -20,7 +21,9 @@ const ArticleMain = () => {
       <Box>
         <TextField>
           <OutlinedInput>
-            <Search />
+            <Search>
+              <SearchIcon />
+            </Search>
           </OutlinedInput>
         </TextField>
       </Box>

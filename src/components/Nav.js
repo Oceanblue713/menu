@@ -14,7 +14,7 @@ const Nav = () => {
       <Box>
         <AppBar
           position="sticky"
-          style={{ background: theme.palette.secondary.main, color: "inherit" }}
+          style={{ background: theme.palette.secondary.main, color: "white" }}
         >
           <Toolbar>
             <IconButton edge="start" aria-label="menu">
