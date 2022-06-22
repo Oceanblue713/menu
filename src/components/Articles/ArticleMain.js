@@ -28,7 +28,15 @@ const ArticleMain = () => {
         </TextField>
       </Box>
       <Box>
-        <SmallCard image={articles[0].image} title={articles[0].title} />
+        {articles.map((article) => {
+          return (
+            <SmallCard
+              image={article.image}
+              title={article.title}
+              key={article.id}
+            />
+          );
+        })}
       </Box>
     </div>
   );

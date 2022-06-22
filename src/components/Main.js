@@ -1,4 +1,5 @@
 import { height } from "@mui/system";
+import { Link } from "react-router-dom";
 import React from "react";
 import CardContainer from "./Cards/CardContainer";
 import GalleryIntro from "./Gallery/GalleryIntro";
@@ -16,7 +17,9 @@ const Main = () => {
       </div>
 
       <div className="main-intro">
-        <h2 className="main-intro-head">Articles</h2>
+        <Link to="/articles">
+          <h2 className="main-intro-head">Articles</h2>
+        </Link>
         We are cruisenewbie, introduce you to Royal Caribbean cruise for Newbies
       </div>
       <div className="main-cards">
