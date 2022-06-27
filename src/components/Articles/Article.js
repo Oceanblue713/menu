@@ -59,7 +59,8 @@ export default function Article() {
         );
       })}
       <Link to="/">
-        <Button>Back to Main</Button>
+        <Button color="primary">Back to Main</Button>
+        <Button></Button>
       </Link>
     </Container>
   );
