@@ -34,6 +34,7 @@ const ArticleMain = () => {
               image={article.image}
               title={article.title}
               key={article.id}
+              link={article.link}
             />
           );
         })}
