@@ -35,13 +35,14 @@ export default function Article() {
 
   return (
     <Container fixed disableGutters maxWidth="md" className="article-top">
-      <Box className="article-image">
+      <Box>
         <CardMedia
           component="img"
           height="400"
           width="100vw"
           image={article.image}
           alt={article.article_en}
+          className="article-image"
         />
         <Typography variant="h3">{article.title}</Typography>
         <Typography variant="body1" gutterBottom>
@@ -58,10 +59,12 @@ export default function Article() {
           />
         );
       })}
-      <Link to="/">
-        <Button color="primary">Back to Main</Button>
-        <Button></Button>
-      </Link>
+
+      <Button color="primary">
+        Back to Main
+        <Link to="/"> </Link>
+      </Button>
+      <Button></Button>
     </Container>
   );
 }
